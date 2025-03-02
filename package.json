@@ -1,0 +1,12 @@
+{
+  "name": "projects-root",
+  "version": "1.0.0",
+  "description": "Root directory for my projects",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
