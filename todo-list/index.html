@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engaging To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="todo-container">
+        <h1>Engaging To-Do List</h1>
+        <form id="todo-form">
+            <input type="text" id="new-todo" placeholder="Add a new task" required>
+            <input type="datetime-local" id="task-deadline" required>
+            <button type="submit">Add</button>
+        </form>
+        <div class="lists-container">
+            <ul id="todo-list" class="todo-list"></ul>
+            <ul id="completed-todo-list" class="completed-todo-list"></ul>
+        </div>
+      <!--<button id="save-pdf">Save as PDF</button>-->
+        <button id="save-jpg">Save as JPG</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
