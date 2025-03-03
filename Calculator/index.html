@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h3>CALCULATOR</h3>
+        <form>
+            <input type="text" id="result" name="Result" placeholder="0" disabled><br>
+            <div class="button-row">
+                <button type="button" onclick="seven()">7</button>
+                <button type="button" onclick="eight()">8</button>
+                <button type="button" onclick="nine()">9</button>
+                <button type="button" onclick="add()">+</button>
+            </div>
+            <div class="button-row">
+                <button type="button" onclick="four()">4</button>
+                <button type="button" onclick="five()">5</button>
+                <button type="button" onclick="six()">6</button>
+                <button type="button" onclick="subtract()">-</button>
+            </div>
+            <div class="button-row">
+                <button type="button" onclick="one()">1</button>
+                <button type="button" onclick="two()">2</button>
+                <button type="button" onclick="three()">3</button>
+                <button type="button" onclick="multiply()">x</button>
+            </div>
+            <div class="button-row">
+                <button type="button" onclick="zero()">0</button>
+                <button type="button" onclick="divide()">/</button>
+                <button type="button" onclick="equal()">=</button>
+                <button type="button" onclick="clearResult()">C</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -6,7 +6,9 @@ const PORT = process.env.PORT || 3000;
 // Serve static files from the root directory
 app.use(express.static(path.join(__dirname)));
 
+// Serve static files from the sub-directories
 app.use('/todo-list', express.static(path.join(__dirname, 'todo-list')));
+app.use('/Calculator', express.static(path.join(__dirname, 'Calculator')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
