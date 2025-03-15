@@ -1,3 +1,0 @@
-/home/ramzan/Projects/Password-Manager/CMakeFiles/PasswordManager.dir
-/home/ramzan/Projects/Password-Manager/CMakeFiles/edit_cache.dir
-/home/ramzan/Projects/Password-Manager/CMakeFiles/rebuild_cache.dir
