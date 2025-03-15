@@ -3,35 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="/Password-Manager/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Projects</h1>
-        <p>Explore my collection of projects. Click on any project to view details and interact with it.</p>
+        <h1>Password Manager</h1>
     </header>
     <main>
-        <section class="project-list">
-            <div class="project-item">
-                <h2>Todo List</h2>
-                <p>A simple and interactive todo list application.</p>
-                <a href="/todo-list/index.html" class="project-link">View Todo List</a>
-            </div>
-            <div class="project-item">
-                <h2>Calculator</h2>
-                <p>An interactive and modern calculator application.</p>
-                <a href="/Calculator/index.html" class="project-link">View Calculator</a>
-             </div>
-             <div class="project-item">
-                <h2>Password Manager</h2>
-                <p>A secure password manager with encryption and decryption functionalities.</p>
-                <a href="/Password-Manager/index.html" class="project-link">View Password Manager</a>
-              </div>
-            <!-- Add more projects here -->
+        <section class="intro">
+            <p>Welcome to the Password Manager application. This project allows you to securely manage your passwords with encryption and decryption functionalities.</p>
         </section>
-    </main>
+        <section class="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Securely store and manage passwords</li>
+                <li>Encrypt and decrypt your data for enhanced security</li>
+                <li>User-friendly graphical interface</li>
+                <li>Master password protection</li>
+            </ul>
+        </section>
+      <section class="instructions">
+            <h2>How to Run the Project Locally</h2>
+            <ol>
+                <li>Clone the repository:
+                    <pre><code>git clone https://github.com/ramzanbhutto/Projects.git</code></pre>
+                </li>
+                <li>Navigate to the Password-Manager directory:
+                    <pre><code>cd Projects/Password-Manager</code></pre>
+                </li>
+                <li>Build the project using CMake:
+                    <pre><code>cmake .</code></pre>
+                </li>
+                <li>Compile the project:
+                    <pre><code>make</code></pre>
+                </li>
+                <li>Run the Password Manager application:
+                    <pre><code>./PasswordManager</code></pre>
+                </li>
+            </ol>
+        </section>
+         </main>
     <footer>
         <p>© 2025 Ramzan Bhutto. All rights reserved.</p>
     </footer>
