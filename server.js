@@ -9,6 +9,7 @@ app.use(express.static(path.join(__dirname)));
 // Serve static files from the sub-directories
 app.use('/todo-list', express.static(path.join(__dirname, 'todo-list')));
 app.use('/Calculator', express.static(path.join(__dirname, 'Calculator')));
+app.use('/Password-Manager', express.static(path.join(__dirname, 'Password-Manager')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
