@@ -1,14 +1,14 @@
 #include "encryption.h"
-#include<string>
+#include <string>
 
-std::string Encryption::encrypt(const std::string& data,const std::string& key) {
+std::string Encryption::encrypt(const std::string& data, const std::string& key) {
     std::string encrypted = data;
-    for (size_t i=0; i<data.length(); i++)
-        encrypted[i]= data[i] ^ key[i % key.size()];
-
+    for (size_t i = 0; i < data.size(); ++i) {
+        encrypted[i] = data[i] ^ key[i % key.size()];
+    }
     return encrypted;
-    
-  std::string Encryption::decrypt(const std::string& data,const std::string& key) {
-    return encrypt(data, key);
-  }
+}
+
+std::string Encryption::decrypt(const std::string& data, const std::string& key) {
+    return encrypt(data, key); // XOR decryption is the same as encryption
 }
