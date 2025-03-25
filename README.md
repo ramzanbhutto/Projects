@@ -10,6 +10,9 @@ A simple and interactive todo list application.
 ### [Calculator](./Calculator/index.html)
 An interactive and modern calculator application.
 
+### [Password Manager](./Password-Manager/index.html)
+
+
 ## Setup
 
 1. Clone the repository:
