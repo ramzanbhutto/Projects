@@ -11,7 +11,7 @@ A simple and interactive todo list application.
 An interactive and modern calculator application.
 
 ### [Password Manager](./Password-Manager/index.html)
-
+A password manager to your passkeys under secured encryption and decryption walls.
 
 ## Setup
 
