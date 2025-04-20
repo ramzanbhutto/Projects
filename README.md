@@ -1,6 +1,6 @@
 # Ramzan Bhutto's Projects
 
-This repository showcases a collection of my projects using GitHub Pages. Each project is contained within its own directory and can be accessed individually.
+This repository showcases a collection of my projects. Each project is contained within its own directory and can be accessed individually.
 
 ## Projects
 
@@ -44,7 +44,7 @@ This project is hosted on Heroku. To deploy, follow these steps:
 
 2. Create a Heroku app:
     ```sh
-    heroku create your-app-name
+    heroku create entire-projects
     ```
 
 3. Push to Heroku:
