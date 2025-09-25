@@ -1,12 +1,12 @@
 # Password Manager Project
 
-This is a graphical user interface application for managing passwords with encryption and decryption.
+This is a Password Manager application developed in C++ using SHA-512 encryption for secure password storage. The application features a simple GUI for user interaction.
 
 ## Features
 
-- Store passwords with usernames
-- Encrypt and decrypt data for better security
-- GUI for easy interaction
+- Store passwords with usernames and passwords
+- Encrypt the data using SHA-512 encryption
+- Decrypt the data when needed
 
 ## How to Run
 
@@ -21,11 +21,3 @@ This is a graphical user interface application for managing passwords with encry
     cmake .
     make
     ./PasswordManager
-    ```
-
-## Files
-
-- `main.cpp`: The main entry point of the application.
-- `encryption.cpp` and `encryption.h`: The files containing encryption and decryption logic.
-- `gui.cpp` and `gui.h`: The files containing the GUI logic.
-- `CMakeLists.txt`: The CMake build configuration file.
