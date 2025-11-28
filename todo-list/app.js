@@ -6,11 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const completedTodoList = document.getElementById('completed-todo-list');
     const saveJpgButton = document.getElementById('save-jpg');
 
-    todoForm.addEventListener('submit', function(event) {
+    // Set minimum datetime to current time
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    taskDeadlineInput.min = now.toISOString().slice(0, 16);
+
+    todoForm.addEventListener('submit', function(event){
         event.preventDefault();
         const taskText = newTodoInput.value.trim();
         const taskDeadline = taskDeadlineInput.value.trim();
-        if (taskText !== '' && taskDeadline !== '') {
+        if(taskText !== '' && taskDeadline !== ''){
             addTodoItem(taskText, taskDeadline);
             newTodoInput.value = '';
             taskDeadlineInput.value = '';
@@ -18,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    function addTodoItem(taskText, taskDeadline) {
+    function addTodoItem(taskText, taskDeadline){
         const li = document.createElement('li');
         li.className = 'todo-item';
         li.innerHTML = `
@@ -30,12 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
         todoList.appendChild(li);
     }
 
-    window.removeTodoItem = function(button) {
+    window.removeTodoItem = function(button){
         const li = button.parentElement;
         li.remove();
     }
 
-    window.markAsComplete = function(button) {
+    window.markAsComplete = function(button){
         const li = button.parentElement;
         Swal.fire({
             title: 'Add Remarks',
@@ -45,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showCancelButton: true,
             confirmButtonText: 'Save',
             preConfirm: (remarks) => {
-                if (remarks) {
+                if(remarks){
                     li.querySelector('span').textContent += ` - Remarks: ${remarks}`;
                 }
                 li.classList.add('completed');
