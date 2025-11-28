@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const taskDeadlineInput = document.getElementById('task-deadline');
     const todoList = document.getElementById('todo-list');
     const completedTodoList = document.getElementById('completed-todo-list');
-    const savePdfButton = document.getElementById('save-pdf');
     const saveJpgButton = document.getElementById('save-jpg');
 
     todoForm.addEventListener('submit', function(event) {
@@ -56,26 +55,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    savePdfButton.addEventListener('click', () => {
-        html2canvas(document.querySelector('.lists-container')).then(canvas => {
-            const imgData = canvas.toDataURL('image/png');
-            const pdf = new jsPDF({ unit: 'pt', format: 'a4' });
-            const imgProps = pdf.getImageProperties(imgData);
-            const pdfWidth = pdf.internal.pageSize.getWidth();
-            const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
-            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-            pdf.save('todo-list.pdf');
-        });
-    });
-
     saveJpgButton.addEventListener('click', () => {
-        html2canvas(document.querySelector('.lists-container')).then(canvas => {
-            const imgData = canvas.toDataURL('image/jpeg');
-            const link = document.createElement('a');
-            link.href = imgData;
-            link.download = 'todo-list.jpg';
-            link.click();
+        html2canvas(document.querySelector('.lists-container'), {
+            backgroundColor: '#ffffff',
+            scale: 2
+        }).then(canvas => {
+            canvas.toBlob((blob) => {
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'todo-list.jpg';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+            }, 'image/jpeg', 0.95);
         });
     });
 });

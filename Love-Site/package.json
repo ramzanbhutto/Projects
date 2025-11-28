@@ -1,0 +1,14 @@
+{
+  "name": "love-site",
+  "version": "1.0.0",
+  "description": "A romantic interactive website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": ["love", "romantic", "interactive"],
+  "author": "Muhammad Ramzan",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
