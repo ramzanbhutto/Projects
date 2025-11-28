@@ -2,8 +2,11 @@ var current = "";
 var previous = "";
 var operation = null;
 
-function update() {
-  document.getElementById("result").value = current;
+function update(){
+  var out = document.getElementById("result");
+  if (!out) return;
+  // Show 0 when empty to improve UX
+  out.value = (current === "" || current === null || current === undefined) ? "0" : String(current);
 }
 
 function seven() { current += "7"; update(); }
@@ -22,7 +25,7 @@ function subtract() { setOperation("-"); }
 function multiply() { setOperation("*"); }
 function divide() { setOperation("/"); }
 
-function setOperation(op) {
+function setOperation(op){
   if (current === "") return;
   if (previous !== "") equal();
   operation = op;
@@ -31,26 +34,48 @@ function setOperation(op) {
   update();
 }
 
-function equal() {
-  if (operation === null || current === "") return;
-  var prev = +previous;
-  var curr = +current;
+function equal(){
+  if(operation === null || current === "") return;
+  var prev = Number(previous);
+  var curr = Number(current);
 
   var result;
-  if (operation === "+") result = prev + curr;
-  else if (operation === "-") result = prev - curr;
-  else if (operation === "*") result = prev * curr;
-  else if (operation === "/") result = prev / curr;
+  if(operation === "+") result = prev + curr;
+  else if(operation === "-") result = prev - curr;
+  else if(operation === "*") result = prev * curr;
+  else if(operation === "/"){
+    if(curr === 0){
+      result = "Error"; // division by zero
+    } 
+    else{
+      result = prev / curr;
+    }
+  }
 
-  current = result;
+  // Normalize result for display
+  if(typeof result === "number"){
+    if(!Number.isFinite(result) || Number.isNaN(result)){
+      current = "Error";
+    }
+    else{
+      current = (Math.round((result + Number.EPSILON) * 1e12) / 1e12).toString();
+    }
+  } 
+  else{
+    current = String(result);
+  }
+
   operation = null;
   previous = "";
   update();
 }
 
-function clearResult() {
+function clearResult(){
   current = "";
   previous = "";
   operation = null;
   update();
 }
+
+// initialize display on load
+update();

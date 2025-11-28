@@ -10,8 +10,8 @@ A simple and interactive todo list application.
 ### [Calculator](./Calculator/index.html)
 An interactive and modern calculator application.
 
-### [Password Manager](./Password-Manager/index.html)
-A password manager to store your passkeys under secured encryption and decryption walls.
+### [Love-Site](./Love-Site/index.html)
+A romantic-themed site - build when I was in bored on a Saturday :)
 
 ## Setup
 
