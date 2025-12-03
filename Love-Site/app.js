@@ -1,10 +1,9 @@
 const questions = [
-  "Do you love me? ❤️",
-  "Will you always be with me? 💍",
-  "Do you think about me every day? 🥰",
-  "Would you like to go on a date with me soon? 🍽️",
-  "Will you Hug and Kiss me😘?",
-  "Do you promise to never break my heart? 💖"
+  "Do you feel too shy to talk, just like I do? ❤️",
+  "Do you ever imagine how our first real conversation will feel? 🥰",
+  "Do you believe in love that waits? ⏲️",
+  "Do you hope for a future where two shy people build a home together?  ",
+  "If one day I gather the courage to tell you everything… will your answer be a soft ‘yes’? 💞"
 ];
 
 let currentQuestion = 0;
@@ -44,6 +43,7 @@ function moveNoButton() {
   if (isMoving) return; // Prevent multiple simultaneous moves
   isMoving = true;
   
+  noBtn.style.position = "absolute";
   if (!noBtn || !container) {
     isMoving = false;
     return;
@@ -95,8 +95,9 @@ function showGift() {
   const root = document.querySelector('.container');
   if (!root) return;
   root.innerHTML = `
-    <h2>Yay! I love you too! ❤️</h2>
-    <p>You are my everything 😘</p>
+    <h2>I'll wait for you ❤️</h2>
+    <p>You are my everything 💞</p>
+    <p>Still have no one to share it with!🤍</p>
   `;
   launchHearts();
 }
