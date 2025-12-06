@@ -42,7 +42,7 @@ This project is hosted on Heroku. To deploy, follow these steps:
 
 2. Create a Heroku app:
     ```sh
-    heroku create entire-projects
+    heroku create project_name_here
     ```
 
 3. Push to Heroku:
