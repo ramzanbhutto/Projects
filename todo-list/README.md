@@ -7,7 +7,7 @@ This is a simple and engaging To-Do List application built with HTML, CSS, and J
 - Add tasks with deadlines
 - Mark tasks as complete with remarks
 - Delete tasks
-- Save the list as PDF or JPG
+- Save the list as JPG
 
 ## How to Run
 
