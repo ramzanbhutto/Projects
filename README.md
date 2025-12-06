@@ -2,8 +2,6 @@
 
 This repository showcases a collection of my projects. Each project is contained within its own directory and can be accessed individually.
 
-## Projects
-
 ### [Todo List](./todo-list/index.html)
 A simple and interactive todo list application.
 
