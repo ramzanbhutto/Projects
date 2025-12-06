@@ -14,9 +14,9 @@ A romantic interactive website where you can express your love in a fun and play
 
 1. Clone this repository
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+ npm install
+```
 
 ## Running Locally
 
@@ -32,8 +32,7 @@ Then open your browser and go to `http://localhost:3000`
 
 - HTML5
 - CSS3
-- Vanilla JavaScript
-- Node.js
+- JavaScript
 - Express.js
 
 ## Preview
